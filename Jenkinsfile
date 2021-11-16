@@ -82,7 +82,7 @@ pipeline {
      // post {
      //     always {
      //       mail bcc: '', 
-     //       body: '''Build completed successfully''', cc: '', from: '', replyTo: '', subject: 'Build successfull', to: 'tesnime.ammar@esprit.tn'
+     //       body: '''Build completed successfully''', cc: '', from: '', replyTo: '', subject: 'Build successfull', to: 'aymen.baghouli@esprit.tn'
      //     }
      //   }
 
