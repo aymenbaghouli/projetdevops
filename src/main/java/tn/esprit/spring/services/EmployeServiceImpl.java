@@ -72,20 +72,6 @@ public class EmployeServiceImpl implements IEmployeService {
 		return employes;
 	}
 	
-	@Override
-	public Employe addEmploye(Employe e) {
-		l.info("START addEmploye");
-		try{
-			l.trace("Début ajouter employe : ");
-			employeRepository.save(e);
-			l.debug("Employe à ajouter : ", e);
-			l.trace("Fin ajouter employe.");
-		}catch(Exception err){
-			l.error("Erreur à addEmploye() : ", err);
-		}
-		return  e;
-	}
-	
 	
 	@Override
 	public void deleteEmploye(int id) {
@@ -106,11 +92,11 @@ public class EmployeServiceImpl implements IEmployeService {
 	public Employe updateEmploye(Employe e) {
 		l.info("START updateEmploye");
 		try{
-			l.trace("Début modifer employe : ");
+			l.trace("Début modifier employe :");
 			employeRepository.save(e);
-			l.debug("Employe à modifier : ", e);
+			l.debug("Employe à modifier :", e);
 			l.trace("Fin modifier employe.");
-		}catch(Exception err){
+		} catch(Exception err){
 			l.error("Erreur à updateEmploye() : ", err);
 		}
 		return  e;

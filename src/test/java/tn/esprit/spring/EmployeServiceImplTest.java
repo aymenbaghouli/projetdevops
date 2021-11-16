@@ -36,7 +36,7 @@ public class EmployeServiceImplTest {
 	@Test
 	public void A_testAddEmploye() throws ParseException {
 		Employe e = new Employe("baghouli", "aymen", "aymen.baghouli@esprit.tn", true, Role.ADMINISTRATEUR); 
-		Employe employeAdded = emprep.addEmploye(e); 
+		Employe employeAdded = emprep.retrieveEmploye(emprep.ajouterEmploye(e)); 
 		Assert.assertEquals(e.getNom(), employeAdded.getNom());
 		l.info(" employe ajouté avec succès");
 	}
@@ -46,7 +46,7 @@ public class EmployeServiceImplTest {
 	public void B_testRetrieveAllEmploye() {
 		List<Employe> listEmployes = emprep.retrieveAllEmployes(); 
 		// if there are 7 users in DB : 
-		Assert.assertEquals(41, listEmployes.size());
+		Assert.assertEquals(45, listEmployes.size());
 	}
 	
 	
